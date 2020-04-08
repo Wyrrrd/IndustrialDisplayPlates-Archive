@@ -1,55 +1,64 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2020-04-08
+  Changes:
+    - Mod takeover from https://mods.factorio.com/mod/IndustrialDisplays
+    - Changed versioning
+    - Changed changelog date format
+  Features:
+    - Added german locale
+---------------------------------------------------------------------------------------------------
 Version: 1.0.8
-Date: 26. 03. 2020
-  Fixes:
+Date: 2020-03-26
+  Bugfixes:
     - Fixed a typo that caused problems for mods that raise custom revive events.
   Known issues:
     - Plate settings are not restored by undo/CTRL-Z. This can't be fixed.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
-Date: 22. 03. 2020
-  Fixes:
+Date: 2020-03-22
+  Bugfixes:
     - Localised name searches were removed. The search filter now only matches against internal names.
     - Better checking for open GUIs on plates being mined/destroyed.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.6
-Date: 20. 03. 2020
+Date: 2020-03-20
   Changes:
     - Added a search filter, which works with the localised (translated) names of items.
     - I heard you don't like displays, so I removed displays that display displays.
-  Fixes:
+  Bugfixes:
     - Plate GUI closes if the owner was removed/destroyed.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
-Date: 17. 03. 2020
-  Fixes:
+Date: 2020-03-17
+  Bugfixes:
     - Minor style updates to reflect recent changes to the character GUI.
     - Requires Factorio 0.18.13 or above.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
-Date: 13. 03. 2020
-  Fixes:
+Date: 2020-03-13
+  Bugfixes:
     - Fixed a selection grid width glitch if all subgroups within a tab have less than 10 items.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
-Date: 07. 03. 2020
-  Fixes:
+Date: 2020-03-07
+  Bugfixes:
     - Fixed a crash with blueprinted display items that do not exist, e.g. items from a removed mod.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.2
-Date: 28. 02. 2020
+Date: 2020-02-28
   Changes:
     - Added 2x2 and 1x1 versions.
     - Recipes reflect coverage.
     - Iron version is rustier.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: 24. 02. 2020
-  Fixes:
+Date: 2020-02-24
+  Bugfixes:
     - Fixed changelog. Hilarious.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 24. 02. 2020
+Date: 2020-02-24
   Changes:
     - Initial release. This mod was forked from the 0.17 version of Industrial Revolution (and is not compatible with it).
     - Any item or fluid can be displayed, but unlike IR 0.17, the displays use the standard icon for the item instead of a high-res sprite.
