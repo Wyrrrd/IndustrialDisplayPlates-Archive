@@ -1,0 +1,10 @@
+Industrial Displays by Deadlock989
+Copyright (C) Deadlock989 2020
+
+CREDITS
+
+All code and graphics created by Deadlock989, with the following exceptions.
+
+Sounds by thomasevd and Raclure @ freesound.org.
+
+Thanks to TheStaplergun for getting me started on GUIs and to others for scripting help.

@@ -1,0 +1,11 @@
+{
+	"name": "IndustrialDisplays",
+	"version": "1.0.8",
+	"title": "Industrial Display Plates",
+	"author": "Deadlock989",
+	"contact": "",
+    "homepage": "",
+	"dependencies": ["base >= 0.18.13"],
+	"description": "Big, medium and small signs which display item and fluid icons. Can be used to blueprint map markers.",
+	"factorio_version": "0.18"
+}
