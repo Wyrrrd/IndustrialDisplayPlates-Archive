@@ -5,6 +5,7 @@ Date: 2020-04-08
     - Mod takeover from https://mods.factorio.com/mod/IndustrialDisplays
     - Changed versioning
     - Changed changelog date format
+    - Changed mod name
   Features:
     - Added german locale
 ---------------------------------------------------------------------------------------------------
