@@ -54,6 +54,7 @@ for display,displaydata in pairs(DID.displays) do
 			icon_size = DID.icon_size,
 			icon_mipmaps = DID.icon_mipmaps,
 			corpse = "small-remnants",
+      fast_replaceable_group = "display",
 			minable = {
 				mining_time = 0.2,
 				result = display,
