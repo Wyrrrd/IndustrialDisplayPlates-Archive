@@ -232,7 +232,7 @@ add_styles({
     display_button_selected = {
         type = "button_style",
         parent = "quick_bar_slot_button",
-        default_graphical_set = data.raw["gui-style"]["default"]["CGUI_filter_slot_button"].selected_graphical_set
+        default_graphical_set = data.raw["gui-style"]["default"]["slot_button"].selected_graphical_set
     },
     display_fake_header = {
         type = "frame_style",
@@ -247,7 +247,7 @@ add_styles({
     },
     display_small_button = {
         type = "button_style",
-        parent = "frame_action_button_no_border",
+        parent = "frame_action_button",
 		left_margin = 1,
 		right_margin = 1,
     },

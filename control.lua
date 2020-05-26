@@ -331,7 +331,7 @@ local function create_display_gui(player, selected)
 	local search_button = header.add {
 		name = "display-search-button",
 		type = "sprite-button",
-		sprite = "utility/search_small_white",
+		sprite = "utility/search_white",
 		style = "display_small_button",
 		tooltip = {"gui.search-with-focus","__CONTROL__focus-search__"},
 	}
