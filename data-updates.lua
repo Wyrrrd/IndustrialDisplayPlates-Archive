@@ -16,4 +16,9 @@ for display,displaydata in pairs(DID.displays) do
 	end
 end
 
+if mods ["Dectorio"] then
+	if data.raw["item-group"]["dectorio"] then
+		data.raw["item-subgroup"]["display-plates"].group = "dectorio"
+	end
+end
 ------------------------------------------------------------------------------------------------------------------------------------------------------
