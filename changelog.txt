@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.2
-Date: 2020-05-28
+Date: 2020-08-02
   Changes:
     - moved plates to Dectorio recipe group (if installed)
   Bugfixes:
