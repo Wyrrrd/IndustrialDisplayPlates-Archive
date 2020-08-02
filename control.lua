@@ -376,7 +376,7 @@ local function create_display_gui(player, selected)
 	local button_table = {}
 	for prototype_type,prototypes in pairs(DID.elem_prototypes) do
 		for _,prototype in pairs(game[prototypes]) do
-			if not DID.displays[prototype.name] and not ((prototype_type == "item" and (prototype.has_flag("hidden") or prototype.show_in_library)) or (prototype_type == "fluid" and prototype.hidden)) then
+			if not DID.displays[prototype.name] and not ((prototype_type == "item" and prototype.has_flag("hidden")) or (prototype_type == "fluid" and prototype.hidden)) then
 				local group = (prototype.group.name == "fluids") and "intermediate-products" or prototype.group.name 
 				if not DID.group_blacklist[group] then
 					if button_table[group] == nil then button_table[group] = {}	end
