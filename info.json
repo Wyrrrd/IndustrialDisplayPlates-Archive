@@ -5,7 +5,8 @@
 	"author": "Wyrrrd",
 	"homepage": "https://github.com/Wyrrrd/IndustrialDisplayPlates",
 	"dependencies": [
-		"base >= 0.18.27"
+		"base >= 0.18.27",
+		"(?)IndustrialRevolution"
 	],
 	"description": "Big, medium and small signs which display item and fluid icons. Can be used to blueprint map markers.",
 	"factorio_version": "0.18"
