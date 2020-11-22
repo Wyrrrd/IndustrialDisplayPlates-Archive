@@ -158,11 +158,11 @@ add_styles({
             left_padding = 10,
             right_padding = 10,
             top_padding = 8,
-            graphical_set = data.raw["gui-style"]["default"]["tabbed_pane"]["tab_content_frame"].graphical_set,
             type = "frame_style",
+			graphical_set = data.raw["gui-style"]["default"]["filter_tabbed_pane"]["tab_content_frame"].graphical_set,
         },
         type = "tabbed_pane_style",
-        parent = "tabbed_pane",
+        parent = "filter_tabbed_pane",
         width = 420,
     },
     display_tab = {
@@ -185,9 +185,9 @@ add_styles({
             horizontal_align = "center",
         },
     },
-    display_deep_frame = {
+    display_inside_frame = {
         type = "frame_style",
-        parent = "inside_deep_frame",
+		parent = "inside_shallow_frame",
         vertical_flow_style = {
             type = "vertical_flow_style",
             vertical_spacing = 0,
@@ -196,34 +196,7 @@ add_styles({
     },
     display_tab_deep_frame = {
         type = "frame_style",
-        parent = "subpanel_inset_frame",
-        vertical_flow_style = {
-            type = "vertical_flow_style",
-            vertical_spacing = 0,
-            padding = 0,
-        },
-        graphical_set = {
-          base = {
-            center = {
-              position = {42,8},
-              size = {1,1},
-            },
-            corner_size = 8,
-            draw_type = "outer",
-            position = {85,0},
-          },
-		  shadow = data.raw["gui-style"]["default"]["inside_deep_frame"].graphical_set.shadow,
-        },
-        background_graphical_set = {
-            corner_size = 8,
-            overall_tiling_horizontal_padding = 5,
-            overall_tiling_horizontal_size = 30,
-            overall_tiling_horizontal_spacing = 10,
-            overall_tiling_vertical_padding = 5,
-            overall_tiling_vertical_size = 30,
-            overall_tiling_vertical_spacing = 10,
-            position = { 282, 17 },
-        },
+        parent = "slot_button_deep_frame",
     },
     display_buttons = {
         type = "table_style",
