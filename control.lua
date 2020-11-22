@@ -359,7 +359,7 @@ local function create_display_gui(player, selected)
 	local content_frame = frame.add {
 		type = "frame",
 		name = "inner-frame",
-		style = "display_deep_frame",
+		style = "display_inside_frame",
 		direction = "vertical",
 	}
 	content_frame.style.top_margin = 8
@@ -469,15 +469,15 @@ local function set_up_display_from_ghost(entity,tags)
 	end
 end
 
-local function reset_globals()
-	global.translations = nil
-end
+-- local function reset_globals()
+	-- global.translations = nil
+-- end
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- event handlers
 
-script.on_configuration_changed(reset_globals)
+-- script.on_configuration_changed(reset_globals)
 script.on_event(defines.events.on_gui_closed, gui_close)
 script.on_event(defines.events.on_gui_click, gui_click)
 script.on_event(defines.events.on_player_mined_entity, event_raised_destroy, get_display_event_filter())
