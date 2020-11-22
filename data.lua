@@ -54,7 +54,7 @@ for display,displaydata in pairs(DID.displays) do
 			icon_size = DID.icon_size,
 			icon_mipmaps = DID.icon_mipmaps,
 			corpse = "small-remnants",
-      fast_replaceable_group = "display",
+			fast_replaceable_group = "display",
 			minable = {
 				mining_time = 0.2,
 				result = display,
@@ -125,7 +125,7 @@ for display,displaydata in pairs(DID.displays) do
 			result = display,
 			result_count = 1,
 			category = "crafting",
-			enabled = mods["IndustrialRevolution"] and (displaydata.IR_unlock == nil) or (displaydata.unlock == nil),
+			enabled = (mods["IndustrialRevolution"] and (displaydata.IR_unlock == nil)) or (not mods["IndustrialRevolution"] and displaydata.unlock == nil),
 			ingredients = displaydata.ingredients,
 			energy_required = 1,
 		}
@@ -289,9 +289,7 @@ data:extend({
         priority = "extra-high",
         width = 32,
         height = 32,
-        mipmap_count = 2,
-		scale = 0.5,
-		flags = {"gui-icon"},
+	flags = {"gui-icon"},
     },
     {
         type = "sound",
