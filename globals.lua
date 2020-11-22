@@ -20,30 +20,30 @@ return {
 		},
 		["iron-display-small"] = {
 			ingredients = {{"iron-plate",1}},
-			IR_unlock = "deadlock-iron-age",
+			IR_unlock = "ir2-iron-milestone",
 		},
 		["iron-display-medium"] = {
 			ingredients = {{"iron-plate",4}},
-			IR_unlock = "deadlock-iron-age",
+			IR_unlock = "ir2-iron-milestone",
 		},
 		["iron-display"] = {
 			ingredients = {{"iron-plate",9}},
-			IR_unlock = "deadlock-iron-age",
+			IR_unlock = "ir2-iron-milestone",
 		},
 		["steel-display-small"] = {
 			ingredients = {{"steel-plate",1}},
 			unlock = "steel-processing",
-			IR_unlock = "deadlock-steel-age",
+			IR_unlock = "ir2-steel-milestone",
 		},
 		["steel-display-medium"] = {
 			ingredients = {{"steel-plate",4}},
 			unlock = "steel-processing",
-			IR_unlock = "deadlock-steel-age",
+			IR_unlock = "ir2-steel-milestone",
 		},
 		["steel-display"] = {
 			ingredients = {{"steel-plate",9}},
 			unlock = "steel-processing",
-			IR_unlock = "deadlock-steel-age",
+			IR_unlock = "ir2-steel-milestonee",
 		},
 	},
 	sizes = {
