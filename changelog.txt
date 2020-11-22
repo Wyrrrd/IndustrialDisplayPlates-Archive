@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.3
+Date: 2020-11-22
+  Changes:
+    - removed unneeded mipmap for map marker (thanks to Deadlock989)
+    - restored IR compat (thanks to Deadlock989)
+    - fixed steel display migration (again) (thanks to Deadlock989)
+---------------------------------------------------------------------------------------------------
 Version: 0.18.2
 Date: 2020-08-02
   Changes:
