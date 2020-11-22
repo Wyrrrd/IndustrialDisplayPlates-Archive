@@ -43,7 +43,7 @@ return {
 		["steel-display"] = {
 			ingredients = {{"steel-plate",9}},
 			unlock = "steel-processing",
-			IR_unlock = "ir2-steel-milestonee",
+			IR_unlock = "ir2-steel-milestone",
 		},
 	},
 	sizes = {
