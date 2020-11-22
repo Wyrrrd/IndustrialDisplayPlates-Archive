@@ -289,9 +289,7 @@ data:extend({
         priority = "extra-high",
         width = 32,
         height = 32,
-        mipmap_count = 2,
-		scale = 0.5,
-		flags = {"gui-icon"},
+	flags = {"gui-icon"},
     },
     {
         type = "sound",
