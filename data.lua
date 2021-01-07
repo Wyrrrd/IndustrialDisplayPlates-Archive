@@ -60,7 +60,7 @@ for display,displaydata in pairs(DID.displays) do
 				result = display,
 			},
 			max_health = 10 + size * 30,
-			flags = {"placeable-player", "placeable-neutral", "player-creation"},
+			flags = {"placeable-player", "placeable-neutral", "player-creation", "not-rotatable"},
 			collision_box = { {-box_size+0.1, -box_size+0.1}, {box_size-0.1, box_size-0.1} },
 			selection_box = { {-box_size, -box_size}, {box_size, box_size} },
 			collision_mask = {
