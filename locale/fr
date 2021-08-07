@@ -1,0 +1,17 @@
+[entity-name]
+copper-display= blahblah french
+iron-display= blahblah french
+steel-display= blahblah french
+copper-display-medium= blahblah french
+iron-display-medium= blahblah french
+steel-display-medium= blahblah french
+copper-display-small= blahblah french
+iron-display-small= blahblah french
+steel-display-small= blahblah french
+
+[controls]
+display-map-marker= blahblah french
+display-plate= blahblah french
+
+[entity-description]
+display= blahblah french
