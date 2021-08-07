@@ -1,17 +1,17 @@
 [entity-name]
-copper-display= blahblah french
-iron-display= blahblah french
-steel-display= blahblah french
-copper-display-medium= blahblah french
-iron-display-medium= blahblah french
-steel-display-medium= blahblah french
-copper-display-small= blahblah french
-iron-display-small= blahblah french
-steel-display-small= blahblah french
+copper-display=Panneau d'affichage en Cuivre (Grand)
+iron-display=Panneau d'affichage en Fer (Grand)
+steel-display=Panneau d'affichage en Acier (Grand)
+copper-display-medium=Panneau d'affichage en Cuivre (Moyen)
+iron-display-medium=Panneau d'affichage en Fer (Moyen)
+steel-display-medium=Panneau d'affichage en Acier (Moyen)
+copper-display-small=Panneau d'affichage en Cuivre (Petit)
+iron-display-small=Panneau d'affichage en Fer (Petit)
+steel-display-small=Panneau d'affichage en Acier (Petit)
 
 [controls]
-display-map-marker= blahblah french
-display-plate= blahblah french
+display-map-marker=Marqueur de carte
+display-plate=Panneau d'affichage
 
 [entity-description]
-display= blahblah french
+display=Une icône qui peut être reliée à un marqueur sur la carte. Les paramètres seront préservés par les Plans de Construction.
