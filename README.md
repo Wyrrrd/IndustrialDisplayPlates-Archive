@@ -1,8 +1,8 @@
 # Industrial Display Plates
-<img src="https://raw.githubusercontent.com/Wyrrrd/IndustrialDisplayPlates/master/thumbnail.png" width="128" height="128">
+<img src="https://raw.githubusercontent.com/Wyrrrd/IndustrialDisplayPlates/master/thumbnail.png" width="144" height="144">
 
 ### Features
-Big, medium and small signs to display item and fluid icons. Can be used to blueprint map markers.
+Big, medium and small signs to display item, fluid and signal icons. Can be used to blueprint map markers.
 
 ### Locale
 If you want to contribute by translating this mod, you can view the existing translations [here](https://github.com/Wyrrrd/IndustrialDisplayPlates/tree/master/locale). I'd be happy to add your language and credits to the next release.
