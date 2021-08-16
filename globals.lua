@@ -54,9 +54,11 @@ return {
 	elem_prototypes = {
 		item = "item_prototypes",
 		fluid = "fluid_prototypes",
+		["virtual-signal"] = "virtual_signal_prototypes",
 	},
 	group_blacklist = {
 		["creative-mod_creative-tools"] = true,
+		["other"] = true,
 	},
 	icon_size = 64,
 	icon_mipmaps = 4,

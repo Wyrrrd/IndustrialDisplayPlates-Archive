@@ -37,16 +37,18 @@ end
 
 local function add_map_marker(entity, icon_type, icon_name)
 	if icon_type and icon_name then
-		entity.force.add_chart_tag(entity.surface, { icon = { type = icon_type, name = icon_name}, position = entity.position })
+		local map_type = (icon_type == "virtual-signal") and "virtual" or icon_type
+		entity.force.add_chart_tag(entity.surface, { icon = { type = map_type, name = icon_name}, position = entity.position })
 		entity.surface.play_sound{path = "map-marker-ping", position = entity.position, volume_modifier = 1}
 	end
 end
 
 local function change_map_markers(entity, icon_type, icon_name)
+	local map_type = (icon_type == "virtual-signal") and "virtual" or icon_type
 	local markers = get_map_markers(entity)
 	if markers then
 		for _,marker in pairs(markers) do
-			marker.icon = { type = icon_type, name = icon_name}
+			marker.icon = { type = map_type, name = icon_name}
 		end
 	end
 end
@@ -74,7 +76,7 @@ local function get_render_sprite_info(entity)
 	local id = find_entity_render(entity)
 	if id then
 		local strings = splitstring(rendering.get_sprite(id), "/")
-		if #strings == 2 then return strings[1], strings[2] end
+		return strings[1], strings[2], strings[1] == 'virtual-signal' and 'virtual' or strings[1]
 	end
 	return nil, nil
 end
@@ -377,7 +379,14 @@ local function create_display_gui(player, selected)
 	for prototype_type,prototypes in pairs(DID.elem_prototypes) do
 		for _,prototype in pairs(game[prototypes]) do
 			if not DID.displays[prototype.name] and not ((prototype_type == "item" and prototype.has_flag("hidden")) or (prototype_type == "fluid" and prototype.hidden)) then
-				local group = (prototype.group.name == "fluids") and "intermediate-products" or prototype.group.name 
+				local group = ""
+				if prototype_type == "virtual-signal" then
+					group = prototype.subgroup.group.name
+				elseif prototype_type == "fluids" then
+					group = "intermediate-products"
+				else
+					group = prototype.group.name
+				end
 				if not DID.group_blacklist[group] then
 					if button_table[group] == nil then button_table[group] = {}	end
 					if button_table[group][prototype.subgroup.name] == nil then	button_table[group][prototype.subgroup.name] = {} end

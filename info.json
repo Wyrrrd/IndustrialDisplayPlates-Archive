@@ -1,6 +1,6 @@
 {
 	"name": "IndustrialDisplayPlates",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"title": "Industrial Display Plates",
 	"author": "Wyrrrd",
 	"homepage": "https://github.com/Wyrrrd/IndustrialDisplayPlates",
@@ -8,6 +8,6 @@
 		"base >= 1.1.0",
 		"(?)IndustrialRevolution"
 	],
-	"description": "Big, medium and small signs which display item and fluid icons. Can be used to blueprint map markers.",
+	"description": "Big, medium and small signs which display item, fluid and signal icons. Can be used to blueprint map markers.",
 	"factorio_version": "1.1"
 }
