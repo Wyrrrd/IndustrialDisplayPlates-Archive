@@ -1,9 +1,9 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.2.0
-Date: 2021-08-16
+Version: 1.1.2
+Date: 2021-08-21
   Changes:
     - Made virtual signals available (snouz)
-    - Softer map pin sound
+    - Softer map ping sound
   Locale:
     - Adjusted French translation
 ---------------------------------------------------------------------------------------------------
