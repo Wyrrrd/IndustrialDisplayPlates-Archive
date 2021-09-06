@@ -552,6 +552,13 @@ script.on_event(defines.events.on_player_setup_blueprint, function (event)
 	local blueprint = nil
 	if player and player.blueprint_to_setup and player.blueprint_to_setup.valid_for_read then blueprint = player.blueprint_to_setup
 	elseif player and player.cursor_stack.valid_for_read and player.cursor_stack.name == "blueprint" then blueprint = player.cursor_stack end
+	
+	-- Workaround for blueprint update bug
+	if blueprint.get_blueprint_entity_count() == 0 then
+		player.print({"display-plates.blueprint-wont-have-icons"})
+		return
+    end
+	
 	if blueprint then
 		for index,entity in pairs(event.mapping.get()) do
 			local stype,sname = get_render_sprite_info(entity)
