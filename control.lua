@@ -65,7 +65,7 @@ local function remove_markers(entity)
 	end
 end
 
-local function find_entity_render(entity) 
+local function find_entity_render(entity)
 	for _,id in pairs(rendering.get_all_ids(DID.mod_name)) do
 		if rendering.get_target(id).entity == entity then return id end
 	end
@@ -154,10 +154,10 @@ local function display_filter_tabs(player,filter)
 		local name = splitstring(tab.tab.name,":")
 	end
 	tabs.selected_tab_index = selected or 1 -- end of shenanigans
-	if textfield.visible then textfield.focus() end -- fix textfield focus 
+	if textfield.visible then textfield.focus() end -- fix textfield focus
 end
 
-local function toggle_search(player,element,override) 
+local function toggle_search(player,element,override)
 	local textfield = player.gui.screen[DID.custom_gui]["display-header"]["display-search-textfield"]
 	if textfield then
 		textfield.visible = override or not textfield.visible
@@ -200,7 +200,7 @@ local display_gui_click = {
 	end,
     ["display-map-marker"] = function (event)
 		local last_display = get_global_player_info(event.player_index,"last_display")
-		if last_display then 
+		if last_display then
 			if get_has_map_marker(last_display) then
 				event.element.style = "display_small_button"
 				remove_markers(last_display)
@@ -253,7 +253,7 @@ local function gui_click(event)
 			frame.destroy()
 			return
 		end
-	end	
+	end
 	-- is there a method for this element?
 	local clicked = splitstring(event.element.name,":")
 	if display_gui_click[clicked[1]] then
@@ -268,16 +268,16 @@ local function create_display_gui(player, selected)
 
 	-- cache which entity this gui belongs to
 	set_global_player_info(player.index,"last_display",selected)
-	
+
 	-- close any existing gui
 	local frame = player.gui.screen[DID.custom_gui]
 	if frame then frame.destroy() end
 	player.opened = player.gui.screen
-	
+
 	-- get markers and currently rendered sprite
 	local markers = next(get_map_markers(selected)) ~= nil
 	local sname, stype = get_render_sprite_info(selected)
-	local render_sprite = (sname and stype) and sname.."/"..stype or nil 
+	local render_sprite = (sname and stype) and sname.."/"..stype or nil
 
 	-- create frame
 	frame = player.gui.screen.add {
@@ -286,7 +286,7 @@ local function create_display_gui(player, selected)
 		direction = "vertical",
 		style = "display_frame",
 	}
-	
+
 	-- update frame location if cached
 	if get_global_player_info(player.index,"display_gui_location") then
 		frame.location = get_global_player_info(player.index,"display_gui_location")
@@ -302,7 +302,7 @@ local function create_display_gui(player, selected)
 	}
 	header.style.bottom_padding = -4
 	header.style.horizontally_stretchable = true
-	
+
 	-- title
 	header.add {
 		type = "label",
@@ -372,7 +372,7 @@ local function create_display_gui(player, selected)
 		type = "tabbed-pane",
 		style = "display_tabbed_pane",
 	}
-	
+
 	-- build a table of info about existing items/fluids
 	-- groups of subgroups of sprites -> localised_string
 	local button_table = {}
@@ -395,7 +395,7 @@ local function create_display_gui(player, selected)
 			end
 		end
 	end
-	
+
 	-- determine the biggest tab size
 	local max_rows = 0
 	for group,subgroups in pairs(button_table) do
@@ -405,7 +405,7 @@ local function create_display_gui(player, selected)
 		end
 		max_rows = math.max(rows,max_rows)
 	end
-	
+
 	-- set up tabs
 	local tab_index = 1
 	for group,subgroups in pairs(button_table) do
@@ -457,7 +457,7 @@ local function create_display_gui(player, selected)
 		end
 		tab_index = tab_index + 1
 	end
-	
+
 	-- make all tabs as big as biggest
 	for _,tab in pairs(display_tabs.tabs) do
 		tab.content.style.height = math.min(640, max_rows * 40)
@@ -477,6 +477,33 @@ local function set_up_display_from_ghost(entity,tags)
 		end
 	end
 end
+
+remote.add_interface(
+    "IndustrialDisplayPlates",
+    {
+        get_sprite = function(event)
+            if event and event.entity and event.entity.valid then
+                local spritetype, spritename = get_render_sprite_info(event.entity)
+                return {spritetype=spritetype, spritename=spritename}
+            else
+                return nil
+            end
+        end,
+
+        set_sprite = function(event)
+            if event and event.entity and event.entity.valid and event.sprite and game.is_valid_sprite_path(event.sprite) then
+                destroy_render(event.entity)
+                render_overlay_sprite(event.entity, event.sprite)
+                if get_has_map_marker(event.entity) then
+                    local spritetype, spritename = get_render_sprite_info(event.entity)
+					change_map_markers(event.entity, spritetype, spritename)
+                end
+            end
+        end
+
+    }
+
+)
 
 -- local function reset_globals()
 	-- global.translations = nil
@@ -515,7 +542,7 @@ script.on_event("deadlock-open-gui", function(event)
     local player = game.players[event.player_index]
 	if player.cursor_stack and player.cursor_stack.valid_for_read then return end
     local selected = player and player.selected
-    if selected and selected.valid and is_a_display(selected) then 
+    if selected and selected.valid and is_a_display(selected) then
 		if player.can_reach_entity(selected) then
 			create_display_gui(player, selected)
 		else
@@ -552,7 +579,7 @@ script.on_event(defines.events.on_player_setup_blueprint, function (event)
 	local blueprint = nil
 	if player and player.blueprint_to_setup and player.blueprint_to_setup.valid_for_read then blueprint = player.blueprint_to_setup
 	elseif player and player.cursor_stack.valid_for_read and player.cursor_stack.name == "blueprint" then blueprint = player.cursor_stack end
-	
+
 	if blueprint then
 		for index,entity in pairs(event.mapping.get()) do
 			local stype,sname = get_render_sprite_info(entity)
