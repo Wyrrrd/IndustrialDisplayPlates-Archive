@@ -494,6 +494,10 @@ remote.add_interface(
             if event and event.entity and event.entity.valid and event.sprite and game.is_valid_sprite_path(event.sprite) then
                 destroy_render(event.entity)
                 render_overlay_sprite(event.entity, event.sprite)
+                if get_has_map_marker(event.entity) then
+                    local spritetype, spritename = get_render_sprite_info(event.entity)
+					change_map_markers(event.entity, spritetype, spritename)
+                end
             end
         end
 
