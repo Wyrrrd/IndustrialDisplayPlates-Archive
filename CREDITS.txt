@@ -5,7 +5,7 @@ CREDITS
 
 All code and graphics created by Deadlock989, with the following exceptions.
 
-Code and graphics modifications after 2020-04-08 by Wyrrrd, ickputzdirwech, Friendch and Deadlock989.
+Code and graphics modifications after 2020-04-08 by Wyrrrd, ickputzdirwech, Friendch, dwightkung and Deadlock989.
 For the latest unmodified version, see https://github.com/Wyrrrd/IndustrialDisplayPlates/tree/cd8778eb3b11f8bde5418088253123b1029dc461
 
 Sounds by thomasevd and Raclure @ freesound.org.
