@@ -613,6 +613,13 @@ script.on_event(defines.events.on_player_changed_position, function (event)
 			gui_close(event)
 		end
 	end
+
+	-- mod migration info
+	local mod_migration_info = get_global_player_info(event.player_index, "mod_migration_info")
+	if not mod_migration_info then
+		player.print({"", "[img=entity.copper-display] ",{"display-plates.mod-migration-info"}})
+		set_global_player_info(event.player_index, "mod_migration_info", true)
+	end
 end)
 
 script.on_event(defines.events.on_gui_text_changed, function(event)
