@@ -1,4 +1,4 @@
-⚠ **This repository will be archived soon.** ⚠
+⚠ **This repository is archived.** ⚠
 
 Though I have had great plans with this mod, I cannot find the time to maintain it properly. Luckily, the mod will not die, you can migrate to [Flydiverny's fork](https://github.com/Flydiverny/IndustrialDisplayPlates). I will try to merge the new features and fixes over to their fork in the meantime...
 
